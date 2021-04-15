@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>name</title>
+</head>
+<body>
+    <h1>
+        Hello, {{name}}!
+    </h1>
+    <p>Today's technology headlines are...</p>
+    <ol>
+    {% for info in infos %}
+      <a href={{info[1]}} target="_blank">
+        <li>{{info[0]}}
+        </li>
+      </a>
+    {% endfor %}
+    </ol>
+</body>
+</html>

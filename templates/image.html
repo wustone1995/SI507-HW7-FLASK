@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+    caption {
+      text-align: left;
+    }
+    </style>
+  <meta charset="UTF-8">
+  <title>name</title>
+</head>
+<body>
+    <h1>
+        Hello, {{name}}!
+    </h1>
+    <!-- <p>Today's technology headlines are...</p> -->
+    <caption>Today's technology headlines are...</caption>
+    <table style="width:50%">
+      <tr>
+        <th>Title</th>
+        <th>Thumbnail</th>
+      </tr>
+      {% for info in infos %}
+        <tr>
+          <td>
+            <a href={{info[1]}} target="_blank">
+              {{info[0]}}
+            </a>
+          </td>
+          <td>
+            <img
+              src={{info[2]}}
+              width=300/>
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+
+</body>
+</html>
